@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        button{
+            position: absolute;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onmouseover="go()">men qaciram</button>
+    </div>
+
+    <script>
+        const btn = document.querySelector('button')
+        function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function go(){
+    const x = rand (0, 90)
+    const y = rand (0, 90)
+    console.log(x)
+    console.log(y)
+
+
+    btn.style.left = x + "%"
+    btn.style.top = y + "%"
+}
+    </script>
+</body>
+</html>
